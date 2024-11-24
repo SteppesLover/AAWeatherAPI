@@ -14,14 +14,14 @@ body{
     padding: 0 15px;
 }
 
-.header{
+.Weather-Header{
     padding: 15px 0;
     position: sticky;
     margin-bottom: 10px;
     text-align: center; 
 }
 
-#city_input {
+#City-Input {
     background-color: var(--bg-color2);
     border: none;
     padding: 12px;
@@ -47,7 +47,7 @@ body{
     background-color: #ff7043;
     cursor: pointer;
 }
-.currentForecast
+.Now-weather
 {
     float: left;
     background-color: var(--bg-color2);
@@ -64,9 +64,9 @@ body{
 }
 
 
-.headHourlyForecast{
+.Head-hourly-forecast{
     background-color: var(--bg-color2);
-    & .hourlyForecast{
+    & .Hourly-Forecast{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         column-gap: 10px;
@@ -76,7 +76,7 @@ body{
     }
 }
 
-.headDailyForecast {
+.Head-daily-forecast {
     margin-top: 10px;
     position: sticky; 
     top: 0px;           
@@ -84,7 +84,7 @@ body{
     background-color: var(--bg-color2);
 }
 
-.dailyForecast {
+.Daily-forecast {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     column-gap: 10px;
@@ -95,7 +95,7 @@ body{
     text-align: center;
 }
 
-.sunriseSunset {
+.Sunset-sunrise {
     float: right;
     font-size: 24px;
     margin-top: 10px;
