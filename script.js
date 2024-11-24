@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const OPEN_METEO = "https://api.open-meteo.com/v1/forecast";
 
-    const cityInput = document.getElementById("city_input"),
+    const cityInput = document.getElementById("City-Input"),
         searchBtn = document.getElementById("searchBtn"),
         locationBtn = document.getElementById("locationBtn");
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function getWeatherDetails(name, lat, lon, country) {
-        document.getElementById("currentForecast").innerHTML = `${name}, ${country}`;
+        document.getElementById("now-Weather").innerHTML = `${name}, ${country}`;
         getCurrentForecast(lat, lon);
         getHourlyForecast(lat, lon);
         getDailyForecast(lat, lon);
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const formattedTime = now.toLocaleString([], { weekday: 'long', hour: '2-digit', minute: '2-digit' });
         const weatherCode = data.current_weather.weathercode; 
         const weatherIcon = getWeatherIcon(weatherCode); 
-        document.getElementById("currentForecast").innerHTML = `
+        document.getElementById("Now-weather").innerHTML = `
             <p>Now weather</p>
             <img src="${weatherIcon}" alt="Weather Icon">
             <h2>${data.current_weather.temperature}&deg;C</h2>
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const times = data.hourly.time.slice(0, 24).filter((_, index) => index % 2 === 0);
         const weatherCodes = data.hourly.weathercode.slice(0, 24).filter((_, index) => index % 2 === 0);
     
-        document.getElementById("hourlyForecast").innerHTML = hourlyData
+        document.getElementById("Hourly-forecast").innerHTML = hourlyData
             .map((temp, index) => {
                 const hour = new Date(times[index]);
                 const formattedHour = hour.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dates = data.daily.time.slice(0, 7);
         const weatherCodes = data.daily.weathercode.slice(0, 7);
     
-        document.getElementById("dailyForecast").innerHTML = dailyMax
+        document.getElementById("Daily-forecast").innerHTML = dailyMax
             .map((tempMax, index) => {
                 const date = new Date(dates[index]);
                 const formattedDate = date.toLocaleDateString([], { weekday: 'long', month: 'short', day: 'numeric' });
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function getSunriseSunset(lat, lon) {
         const response = await fetch(`${OPEN_METEO}?latitude=${lat}&longitude=${lon}&daily=sunrise,sunset&timezone=auto`);
         const data = await response.json();
-        document.getElementById("sunriseSunset").innerHTML = `
+        document.getElementById("Sunset-sunrise").innerHTML = `
             <div class="item">
                 <div class="icon">
                     <i class="fas fa-sun fa-4x"></i>
