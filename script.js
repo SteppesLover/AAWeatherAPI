@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
         locationBtn = document.getElementById("locationBtn");
 
     const weatherIcons = {
-        sunny: "sunny.png",  
-        cloudy: "cloudy.png", 
-        rain: "rainy.png",    
-        foggy: "foggy.png",
-        freezing_rain: "freezing_raing.png",
-        snowfall: "snowfall.png",
-        thunderstorm: "thunderstorm.png"
+        sunny: "images/sunny.png",  
+        cloudy: "images/cloudy.png", 
+        rain: "images/rainy.png",    
+        foggy: "images/foggy.png",
+        freezing_rain: "images/freezing_raing.png",
+        snowfall: "images/snowfall.png",
+        thunderstorm: "images/thunderstorm.png"
     };
         
         function getWeatherIcon(weatherCode) {
