@@ -15,13 +15,14 @@ git clone https://github.com/SteppesLover/AAWeatherAPI
 
 2. Open index.html directory in your browser.
 
-##How It Works:
-##Search by City:
+## How it works: 
+
+## Search by city
 1. Write a name of desired city and click the "Search" button. 
 2. The app will display weather details for the specified location. 
 3. You can put name to specify location like "Russia, Berlin", if your city name is popular city from other country and it displays wrong information.
 
-##Use Current Location:
+## Use the current location
 1. Click the Use Current Location button. 
 2. The app will ask permission to get your exact location and based on your geodata will display the weather data.
 API Features:
@@ -29,4 +30,4 @@ API Features:
 2. Hourly: Provides hourly forecasts (temperature, weather conditions, etc.).
 3. Daily: Supplies daily forecasts for up to 7 days with max and min temperature per day. 
 
-##Done by Amanzhanov Alikhan in 2024 year. 
+## Done by Amanzhanov Alikhan in 2024:
